@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(28, 153, 250);
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    height: 85px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 78px;
+}
+
+nav ul li {
+    list-style: none;
+    display: flex;
+    padding: 0 7vh;
+    color: white;
+    padding-top: 7px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    width: 470px;
+    height: 30px;
+    border-radius: 6px;
+    margin-right: 24px;
+    padding: 0 12px;
+}
+
+footer {
+    background-color: rgb(28, 153, 250);
+    height: 10vh;
+    color: black;
+    font-family: 'Lato', sans-serif;
+}
+
+header img {
+    display: flex;
+    justify-content: center;
+    padding: 0 25px;
+    padding-top: 13px;
+    width: 178px;
+    height: 85px;
+    align-items: center;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.slider img.active {
+    display: block;
+}
+
+section {
+    height: 200vh;
+}
+
+.card {
+    max-width: 91vw;
+    margin: 25px 50px 75px 100px;
+
+}
+
+.card-items {
+    justify-content: center;
+    margin: 0 50px;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.cards {
+
+    display: flex;
+    align-items: center;
+}
+
+
+.container {
+    min-height: calc(100vh-78px-13vh)
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
