@@ -5,11 +5,16 @@
 
 .btn {
     padding: 5px 20px;
-    color: white;
-    background: rgb(28, 153, 250);
-    border: 2px solid white;
+    color: rgb(28, 153, 250);
+    background: white;
+    border: 2px solid rgb(28, 153, 250);
     border-radius: 4px;
     cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #117bacd5;
+    color: white;
 }
 
 .btn1 {
@@ -19,7 +24,29 @@
     border: 2px solid white;
     border-radius: 4px;
     cursor: pointer;
-    margin: 0px 80px;
+    margin: 0px 8px;
+    width: 110px;
+    height: 40px;
+}
+
+.btn2 {
+    padding: 5px 20px;
+    color: rgb(28, 153, 250);
+    background: white;
+    border: 2px solid rgb(28, 153, 250);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.btn2:hover {
+    background-color: #117bacd5;
+    color: white;
+}
+
+.btn1:hover {
+    background-color: #117bacd5;
+    color: white;
 }
 
 h2 {

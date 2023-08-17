@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="responsive.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="images/flipkart-plus.png">
+        <nav>
+            <ul>
+                <li class="point"><a href="index.html">HOME</a></li>
+                <li class="point"><a href="contact.html">CONTACT</a></li>
+                <li class="point"><a href="about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" name="" id="" placeholder="Search Here">
+            <a href="error.html"> <button class="btn">Search</button></a>
+            <a href="login.html"><button class="btn2">Login</button></a>
+            <a href="register.html"><button class="btn2">SignUp</button></a>
+
+
+        </div>
+
+    </header>
+    <section>
+       <p>
+        <b>Flipkart Help Center | 24x7 Customer Care Support</b><br><br>
+        The Flipkart Help Centre page lists out various types of issues that you may have encountered so that there can be quick
+        resolution and you can go back to shopping online. For example, you can get more information regarding order tracking,
+        delivery date changes, help with returns (and refunds), and much more. The Flipkart Help Centre also lists out more
+        information that you may need regarding Flipkart Plus, payment, shopping, and more. The page has various filters listed
+        out on the left-hand side so that you can get your queries solved quickly, efficiently, and without a hassle. You can
+        get the Flipkart Help Centre number or even access Flipkart Help Centre support if you need professional help regarding
+        various topics. The support executive will ensure speedy assistance so that your shopping experience is positive and
+        enjoyable. You can even inform your loved ones of the support page so that they can properly get their grievances
+        addressed as well. Once you have all your queries addressed, you can pull out your shopping list and shop for all your
+        essentials in one place. You can shop during festive sales to get your hands on some unbelievable deals online. This
+        information is updated on 16-Aug-23
+       </p>
+       <div>
+        <img src="images/help.jpg" width="100px" height="100px" class="help">
+        </div>
+
+    <div class="help-widget">
+        <div class="header">Help Assistant</div>
+        <div class="chat-box" id="chatBox"></div>
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="Type your question...">
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+    <div class="list-slider">
+        <div class="list">
+            <div class="list-item">Item 1</div>
+            <div class="list-item">Item 2</div>
+            <div class="list-item">Item 3</div>
+            <div class="list-item">Item 4</div>
+            <div class="list-item">Item 5</div>
+        </div>
+    </div>
+    <script>
+        const list = document.querySelector('.list');
+        const listItems = document.querySelectorAll('.list-item');
+        let currentIndex = 0;
+
+        function updateSlider() {
+            const itemHeight = listItems[0].offsetHeight;
+            const translateY = -currentIndex * itemHeight;
+            list.style.transform = `translateY(${translateY}px)`;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateSlider();
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowDown') {
+                currentIndex = Math.min(currentIndex + 1, listItems.length - 1);
+            } else if (event.key === 'ArrowUp') {
+                currentIndex = Math.max(currentIndex - 1, 0);
+            }
+
+            updateSlider();
+        });
+    </script>
+
+    </div>
+    <script src="script.js"></script>
+   
+    </section>
+    <footer>
+        <p class="text-center"> Copyrigths &copy; Flipkart</p>
+    </footer>
+</body>
+
+</html>
