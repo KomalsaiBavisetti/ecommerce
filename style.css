@@ -2,9 +2,12 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 header {
-    background-color: rgb(28, 153, 250);
+    background-color: rgb(6, 112, 138);
     font-family: 'Lato', sans-serif;
     display: flex;
     height: 100%;
@@ -22,7 +25,7 @@ nav ul {
 nav ul li {
     list-style: none;
     display: flex;
-    padding: 0 6vh;
+    padding: 0 4vh;
     color: white;
     padding-top: 7px;
 }
@@ -33,10 +36,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: white;
+    /* background-color: white;
     text-decoration: none;
-    color: rgb(28, 153, 250);
+    color:rgba(7, 125, 155, 0.87);
     font-family: Arial, Helvetica, sans-serif;
+    border-radius: 3px; */
+    /* coursor:pointer */
+    transform: scale(1.1);
 }
 
 .search {
@@ -45,12 +51,12 @@ nav ul li a:hover {
 }
 
 .search input {
-    width: 375px;
-    height: 30px;
+    width: 310px;
+    height: 25px;
     border-radius: 6px;
     margin-right: 24px;
     padding: 0 12px;
-    color: rgb(28, 153, 250);
+    color: black;
     background-color: white;
 }
 
@@ -71,6 +77,81 @@ p {
     height: 350px;
     margin-top: 70px;
     margin-left: 80px;
+    
+}
+.overalllist  {
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        text-decoration: none;
+        
+
+}
+.overalllist a{
+    text-decoration: none;
+}
+nav ul a img{
+    width:70px ;
+    height: 70px;
+    margin-left: 90px;
+    margin-top: -10px;
+}
+.list {
+    color: black;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+    padding: 1px 0px;
+    margin-left: 100px;
+   
+    
+
+}
+.list:hover{
+    color: rgba(17, 145, 177, 0.87);
+  
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the list item */
+.list-item  {
+    cursor: pointer;
+    
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(53, 52, 52, 0.521);
+    z-index: 1;
+    
+}
+
+/* Style the list items inside the dropdown */
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+
+/* Change the background color of the dropdown items on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: rgba(17, 145, 177, 0.87);
+}
+
+/* Show the dropdown content when hovering over the list item */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 body {
@@ -80,32 +161,81 @@ body {
 
 
 
-footer {
-    background-color: rgb(28, 153, 250);
-    height: 10vh;
-    color: black;
+/* footer {
+    background-color:#172337;
+    height: 50vh;
+    color: white;
     font-family: 'Lato', sans-serif;
-}
+} */
 
 header img {
     display: flex;
     justify-content: center;
     padding: 0 25px;
-    padding-top: 32px;
+    padding-top: 14px;
     padding-left: 60px;
     width: 100px;
-    height: 25px;
+    height: 40px;
     align-items: center;
 }
 
+.slider-container {
+    width: 100%;
+    height: 100vh;
+    /* 100% viewport height */
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    height: 100vh;
+    /* 100% viewport height */
+    object-fit: cover;
+}
+.cart {
+    text-decoration: none;
+    color: white;
+
+}
+.ball{
+    margin-top: -190px;
+    margin-left: 400px;
+    margin-bottom: 70px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
 .image-container {
     position: relative;
     display: inline-block;
 }
+.inside{
+    margin-top: 100px;
+    margin-left: -500px;
+}
+.page {
+    width: 930px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin: 80px 180px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
 
 .image {
-    width: 130px;
-    height: 130px;
+    width: 115px;
+    height: 120px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -140,10 +270,10 @@ header img {
 
 .about-header-image {
 
-    margin-bottom: 220px;
+    margin-bottom: 195px;
     margin-left: 30px;
-    width: 200px;
-    height: 100px;
+    width: 250px;
+    height: 150px;
 
 }
 
@@ -158,7 +288,99 @@ header img {
 
 }
 
-section {
+.address-form {
+    width: 40%;
+    margin-top: 60px;
+    margin-left: 350px;
+    padding: 50px;
+    border: 3px solid #ccc;
+}
+
+.address-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.address-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.address-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+.payment-form {
+    width: 60%;
+    margin: 150px 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.payment-method label {
+    margin-left: 10px;
+}
+
+.payment-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.cart {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: black;
+
+}
+
+.cart-item img {
+    max-width: 100px;
+    height: auto;
+}
+
+.item-details {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.remove-btn {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+section{
     height: 250vh;
 }
 
@@ -189,5 +411,78 @@ section {
 .container {
     min-height: calc(100vh-78px-13vh)
 }
+footer{
+    margin-top: 15px;
+}
+.foot-pannel1{
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
 
+
+}
+.foot-route{
+    text-decoration: none;
+    color: white;
+}
+.foot-pannel2{
+    background-color: #222f3d;
+    color: white;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+footer ul{
+    margin-top: 20px;
+} 
+footer ul a{
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #dddddd;
+
+}
+.foot-pannel3{
+    background-color: #172337;
+    color:white;
+    border-top: 0.5px solid white;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    background-image: url(images/infimart.png);
+background-size: cover;
+height: 33px;
+width: 100px;
+}
+.foot-pannel4{
+    background-color: #172337;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.pages{
+    font-size: 0.7rem;
+    text-align: center;
+    justify-content: center;
+    padding-top: 10px;
+    margin-left: -30px;
+}
+.copyright{
+ 
+    font-size: 0.7rem;
+    text-align: center;
+    padding-top: 50px;
+    margin-left: -200px
+}
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');

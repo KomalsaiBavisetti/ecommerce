@@ -5,22 +5,21 @@
 
 .btn {
     padding: 5px 20px;
-    color: rgb(28, 153, 250);
+    color:rgba(7, 125, 155, 0.87);
     background: white;
-    border: 2px solid rgb(28, 153, 250);
+    border: 2px solidrgba(17, 145, 177, 0.87);
     border-radius: 4px;
     cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #117bacd5;
+    background-color: rgb(10, 123, 151);
     color: white;
 }
-
 .btn1 {
     padding: 5px 20px;
     color: white;
-    background: rgb(28, 153, 250);
+    background:rgba(7, 125, 155, 0.87);
     border: 2px solid white;
     border-radius: 4px;
     cursor: pointer;
@@ -31,21 +30,52 @@
 
 .btn2 {
     padding: 5px 20px;
-    color: rgb(28, 153, 250);
+    color:rgba(7, 125, 155, 0.87);
     background: white;
-    border: 2px solid rgb(28, 153, 250);
+    border: 2px solidrgba(7, 125, 155, 0.87);
     border-radius: 4px;
     cursor: pointer;
     margin-left: 20px;
 }
 
 .btn2:hover {
-    background-color: #117bacd5;
+    background-color: rgb(10, 123, 151);
     color: white;
 }
 
+.btn3 {
+    padding: 5px 20px;
+    color:rgb(6, 112, 138);
+    background: white;
+    border: 2px solid rgb(6, 112, 138);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: -35px;
+    margin-bottom: -150px;
+}
+
+.btn3:hover {
+    background-color:rgb(6, 112, 138);
+    color: white;
+}
+.btn4 {
+    padding: 5px 20px;
+    color:rgba(17, 145, 177, 0.87);
+    background: white;
+    border: 2px solid rgba(17, 145, 177, 0.87);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-right: -390px;
+   
+}
+
+.btn4:hover {
+    background-color: rgb(6, 112, 138);
+    color: white;
+}
 .btn1:hover {
-    background-color: #117bacd5;
+    background-color:rgb(6, 112, 138);
     color: white;
 }
 

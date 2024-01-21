@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceed to Payment</title>
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <div class="payment-form">
+        <h1>Payment Options</h1><br><br>
+        <form>
+            <div class="payment-method">
+                <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" required>
+                <label for="creditCard">Credit Card</label><br>
+            </div>
+            <div class="payment-method">
+                <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                <label for="paypal">PayPal</label><br>
+            </div>
+            <div class="payment-method">
+                <input type="radio" id="bankTransfer" name="paymentMethod" value="bankTransfer">
+                <label for="bankTransfer">Bank Transfer</label><br>
+            </div>
+
+            <button type="submit">Proceed to Payment</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Login / Register Form</title>
     <style>
         body {
@@ -49,7 +50,7 @@
             width: 100%;
         }
 
-        .form-container input[type="submit"]:hover {
+        .form-container input[type="button"]:hover {
             background-color: #0056b3;
         }
 
@@ -57,31 +58,62 @@
             color: #007bff;
             text-decoration: none;
         }
+        .login-img{
+            width: 100px;
+            height: 80px;
+            margin-left: 115px;
+        }
     </style>
 </head>
 
 <body>
+    <div><img class="login-img" src="images/titlelogo.png"</div>
     <div class="form-container">
         <h2>Login</h2>
-        <form action="connect.php" method="post" id="login-form">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" value="Login">
-            <a href="register.html" id="forgot-password">Forgot Password?</a>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+          <button type="button" onclick="checkLogin()">Login</button><br><br>
+          <a href="register.html">create an account</a>
+        <button type="button" id="registerButton" style="display: none;" onclick="redirectToRegisterPage()">Register</button>
         </form>
+        <p id="message"></p>
     </div>
 
     <script>
-        const loginForm = document.getElementById("login-form");
-        const registerForm = document.getElementById("register-form");
-        const forgotPasswordLink = document.getElementById("forgot-password");
+        
+            // Sample user data (in a real application, this should be stored securely on a server)
+            // Sample user data (in a real application, this should be stored securely on a server)
+            // Sample user data (in a real application, this should be stored securely on a server)
+                const userData = {
+                    username: "komal sai",
+                    password: "123"
+                };
+            
 
-        forgotPasswordLink.addEventListener("click", function (event) {
-            event.preventDefault();
-            loginForm.style.display = "none";
-            registerForm.style.display = "block";
-        });
+                function checkLogin() {
+                    const usernameInput = document.getElementById("username").value;
+                    const passwordInput = document.getElementById("password").value;
+                    if (usernameInput === userData.username && passwordInput === userData.password) {
+                        // Redirect to the index page (change 'index.html' to your actual index page URL)
+                        window.location.href = 'index.html';
+                    } else {
+                        document.getElementById("message").innerHTML = "Invalid credentials. Please register.";
+                        document.getElementById("registerButton").style.display = "block"; // Show the "Register" button
+                    }
+                }
+
+                function redirectToRegisterPage() {
+                    // Redirect to the registration page (change 'register.html' to your actual registration page URL)
+                    window.location.href = 'register.html';
+                }
+
     </script>
+
 </body>
 
 </html>

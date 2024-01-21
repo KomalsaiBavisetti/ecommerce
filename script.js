@@ -41,3 +41,71 @@ userInput.addEventListener('keydown', (event) => {
         processUserInput();
     }
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const cartItemsList = document.querySelector('.cart-items');
+    const cartTotal = document.querySelector('.cart-total');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const productName = this.getAttribute('data-product');
+            const productPrice = parseFloat(this.getAttribute('data-price'));
+
+            const cartItem = document.createElement('li');
+            cartItem.innerHTML = `${productName} - $${productPrice.toFixed(2)}`;
+            cartItemsList.appendChild(cartItem);
+
+            updateCartTotal(productPrice);
+        });
+    });
+
+    function updateCartTotal(price) {
+        const currentTotal = parseFloat(cartTotal.textContent.substring(1));
+        const newTotal = currentTotal + price;
+        cartTotal.textContent = `$${newTotal.toFixed(2)}`;
+    }
+});
+
+
+        // Sample user data (in a real application, this should be stored securely on a server)
+    // Sample user data (in a real application, this should be stored securely on a server)
+    const userData = {
+        username: "komal sai",
+    password: "123"
+            };
+
+    function checkLogin() {
+                const usernameInput = document.getElementById("username").value;
+    const passwordInput = document.getElementById("password").value;
+    if (usernameInput === userData.username && passwordInput === userData.password) {
+        // Redirect to the index page (change 'index.html' to your actual index page URL)
+        window.location.href = 'index.html';
+                } else {
+        document.getElementById("message").innerHTML = "Invalid credentials. Please register.";
+    document.getElementById("registerButton").style.display = "block"; // Show the "Register" button
+                }
+            }
+
+    function redirectToRegisterPage() {
+        // Redirect to the registration page (change 'register.html' to your actual registration page URL)
+        window.location.href = 'register.html';
+            }
+
+// Get all the question elements
+const questions = document.querySelectorAll('.question');
+
+// Add click event listeners to each question
+questions.forEach((question) => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling; // Get the next sibling (the answer)
+
+        // Toggle the answer's visibility
+        if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+        } else {
+            answer.style.display = 'block';
+        }
+    });
+});
+
+
